@@ -8,10 +8,14 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "changeset:create": "changeset",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "turbo": "turbo",
+    "publish-all": "pnpm build && pnpm changeset publish",
+    "update-version": "changeset version && pnpm install --no-frozen-lockfile"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
@@ -25,5 +29,8 @@
   "packageManager": "pnpm@7.18.2",
   "lint-staged": {
     "*.{ts,tsx,md}": "prettier --write"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.25.2"
   }
 }
