@@ -9,7 +9,7 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "changeset:autogenerate": "node .changeset/changesets-autogenerate.mjs",
-    "release": "turbo run build --filter=docs && changeset publish",
+     "release": "pnpm changeset version && pnpm changeset publish",
     "preview-storybook": "turbo run preview-storybook"
   },
   "devDependencies": {
