@@ -5,7 +5,7 @@ import fs from 'fs';
 const commitMessage = execSync('git log -1 --format=%s').toString().trim();
 
 // Define valid scopes
-const validScopes = ['docs','release'];
+const validScopes = ['docs','release','core'];
 
 // Define regex patterns
 const commitPatterns = {
