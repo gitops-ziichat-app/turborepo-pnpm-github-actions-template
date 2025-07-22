@@ -35,10 +35,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: TurboRepo GitHub Artifact Cache
-        uses: felixmosh/turborepo-gh-artifacts@v2
+      - name: TurboRepo local server
+        uses: felixmosh/turborepo-gh-artifacts@v3
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          server-token: ${{ secrets.TURBO_SERVER_TOKEN }}
 
       - name: Build
         run: pnpm turbo run build
