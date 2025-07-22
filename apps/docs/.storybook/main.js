@@ -3,7 +3,10 @@ import { dirname, join, resolve } from "path";
 function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, "package.json")));
 }
+<<<<<<< HEAD
 console.log("test1");
+=======
+>>>>>>> 825b87c (fix(docs): fix storybook)
 const config = {
   stories: ["../stories/*.stories.tsx", "../stories/**/*.stories.tsx"],
   addons: [
